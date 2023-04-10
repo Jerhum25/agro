@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  body {
+    width: 90%;
+    margin: auto;
+    font-family: calibri;
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      .left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+          width: 50px;
+        }
+        h1 {
+          text-transform: uppercase;
+        }
+      }
+      .center {
+        display: flex;
+        flex-direction: row;
+        li {
+          list-style-type: none;
+          position: relative;
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+
+          a {
+            color: #000;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          &::after {
+            content: "";
+            background-color: rgb(33, 211, 33);
+            height: 3px;
+            width: 0;
+            display: block;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            transition: .4s ease-in-out;
+
+          }
+        }
+      }
+      .right {
+        button {
+          color: #fff;
+          border: none;
+          background: rgb(33, 211, 33);
+          padding: 10px 20px;
+          font-size: 14px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    main {
+      .ecolobot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text {
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+          h2 {
+            text-transform: uppercase;
+            font-size: 70px;
+            font-weight: bold;
+            span {
+              color: rgb(33, 211, 33);
+            }
+          }
+        }
+        h3 {
+          font-size: 20px;
+          margin: 15px 0;
+        }
+        button {
+          color: #fff;
+          border: none;
+          background: rgb(33, 211, 33);
+          padding: 10px 20px;
+          font-size: 14px;
+          border-radius: 20px;
+          text-transform: uppercase;
+          margin-top: 15px;
+          width: fit-content;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+      img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+      }
+    }
+
+    .services {
+      margin: 50px 0;
+      h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        .card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 20px;
+          width: 300px;
+          height: 300px;
+          box-shadow: 0 0 10px lightgrey;
+          border-radius: 10px;
+          padding: 20px;
+          img {
+            width: 100px;
+          }
+          h3 {
+            font-size: 25px;
+            text-transform: capitalize;
+          }
+          button {
+            color: #fff;
+            border: none;
+            background: rgb(33, 211, 33);
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            width: fit-content;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .aPropos {
+      h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .description {
+        display: flex;
+        align-items: center;
+        counter-increment: description;
+        &::before {
+          content: counter(description);
+          width: 30px;
+          height: 100%;
+          display: block;
+          font-size: 80px;
+          margin-right: 25px;
+          font-weight: bold;
+          color: rgb(33, 211, 33);
+        }
+      }
+    }
+
+    .contact {
+      margin: 50px 0;
+      h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 35%;
+          input,
+          textarea {
+            background-color: rgb(235, 234, 234);
+            border-radius: 15px;
+            border: none;
+            padding: 10px;
+            outline: none;
+            font-size: 18px;
+            font-family: calibri;
+          }
+          button {
+            color: #fff;
+            border: none;
+            background: rgb(33, 211, 33);
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            width: fit-content;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+        img {
+          width: 60%;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+  }
+}

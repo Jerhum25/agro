@@ -1,0 +1,263 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  width: 90%;
+  margin: auto;
+  font-family: calibri;
+}
+html body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+html body header .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html body header .left img {
+  width: 50px;
+}
+html body header .left h1 {
+  text-transform: uppercase;
+}
+html body header .center {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+html body header .center li {
+  list-style-type: none;
+  position: relative;
+}
+html body header .center li:not(:last-child) {
+  margin-right: 15px;
+}
+html body header .center li:hover::after {
+  width: 100%;
+}
+html body header .center li a {
+  color: #000;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+}
+html body header .center li::after {
+  content: "";
+  background-color: rgb(33, 211, 33);
+  height: 3px;
+  width: 0;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+html body header .right button {
+  color: #fff;
+  border: none;
+  background: rgb(33, 211, 33);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+html body main .ecolobot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+html body main .ecolobot .text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+html body main .ecolobot .text h2 {
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: bold;
+}
+html body main .ecolobot .text h2 span {
+  color: rgb(33, 211, 33);
+}
+html body main .ecolobot .text h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+html body main .ecolobot .text button {
+  color: #fff;
+  border: none;
+  background: rgb(33, 211, 33);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+}
+html body main .ecolobot img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+html body .services {
+  margin: 50px 0;
+}
+html body .services h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+html body .services .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+html body .services .cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px lightgrey;
+  border-radius: 10px;
+  padding: 20px;
+}
+html body .services .cards .card img {
+  width: 100px;
+}
+html body .services .cards .card h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+html body .services .cards .card button {
+  color: #fff;
+  border: none;
+  background: rgb(33, 211, 33);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+}
+html body .aPropos h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+html body .aPropos .description {
+  display: flex;
+  align-items: center;
+  counter-increment: description;
+  margin-bottom: 20px;
+}
+html body .aPropos .description::before {
+  content: counter(description);
+  width: 30px;
+  height: 100%;
+  display: block;
+  font-size: 80px;
+  margin-right: 25px;
+  font-weight: bold;
+  color: rgb(33, 211, 33);
+}
+html body .contact {
+  margin: 50px 0;
+}
+html body .contact h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+html body .contact div {
+  display: flex;
+  justify-content: space-between;
+}
+html body .contact div form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 35%;
+}
+html body .contact div form input,
+html body .contact div form textarea {
+  background-color: rgb(235, 234, 234);
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  font-family: calibri;
+}
+html body .contact div form button {
+  color: #fff;
+  border: none;
+  background: rgb(33, 211, 33);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+}
+html body .contact div img {
+  width: 60%;
+  border-radius: 20px;
+}
+html footer {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 420px) {
+  html body {
+    width: 95%;
+  }
+  html body main .ecolobot {
+    flex-direction: column-reverse;
+  }
+  html body main .ecolobot .text {
+    width: 100%;
+  }
+  html body main .ecolobot img {
+    width: 350px;
+    height: 350px;
+  }
+  html body main .services .cards {
+    justify-content: center;
+  }
+  html body main .contact div form {
+    width: 100%;
+  }
+  html body main .contact div form input {
+    margin-bottom: 10px;
+  }
+  html body main .contact div img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
