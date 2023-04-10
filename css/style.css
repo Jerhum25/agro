@@ -27,29 +27,55 @@ html body header .left img {
 html body header .left h1 {
   text-transform: uppercase;
 }
-html body header .center {
+html body header .center .burgerMenu {
+  width: 40px;
+  height: 3px;
+  background: #000;
+  position: relative;
+  margin-right: 10px;
+  display: none;
+}
+html body header .center .burgerMenu::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #000;
+  bottom: 12px;
+  left: 0;
+}
+html body header .center .burgerMenu::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #000;
+  bottom: -12px;
+  left: 0;
+}
+html body header .center nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-html body header .center li {
+html body header .center nav li {
   list-style-type: none;
   position: relative;
 }
-html body header .center li:not(:last-child) {
+html body header .center nav li:not(:last-child) {
   margin-right: 15px;
 }
-html body header .center li:hover::after {
+html body header .center nav li:hover::after {
   width: 100%;
 }
-html body header .center li a {
+html body header .center nav li a {
   color: #000;
   text-decoration: none;
   text-transform: capitalize;
   font-size: 18px;
   font-weight: bold;
 }
-html body header .center li::after {
+html body header .center nav li::after {
   content: "";
   background-color: rgb(33, 211, 33);
   height: 3px;
@@ -91,7 +117,7 @@ html body main .ecolobot .text h2 span {
 html body main .ecolobot .text h3 {
   font-size: 20px;
   margin: 15px 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 html body main .ecolobot .text button {
   color: #fff;
@@ -235,6 +261,38 @@ html footer {
 @media screen and (max-width: 420px) {
   html body {
     width: 95%;
+  }
+  html body header {
+    position: relative;
+  }
+  html body header .center nav {
+    display: none;
+  }
+  html body header .center .burgerMenu {
+    display: block;
+  }
+  html body header .center .burgerMenu:hover + nav {
+    display: flex;
+    transform: translateX(0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+  }
+  html body header .center .burgerMenu:hover + nav li {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+  html body header .center .burgerMenu:hover + nav li a {
+    font-size: 25px;
+  }
+  html body header .right {
+    display: none;
   }
   html body main .ecolobot {
     flex-direction: column-reverse;
